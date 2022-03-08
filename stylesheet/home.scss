@@ -1,0 +1,129 @@
+//varebils
+$mainColor: #fff;
+$alpha: 0.1;
+$activeColor: rgba(5, 85, 255, 0.973);
+
+//maxin
+@mixin font ( $size , $transform , $margin-top , $margin-left) {
+    font-size: $size;
+    text-transform: $transform;
+    margin: $margin-top $margin-left;
+}
+
+%flex{
+    display: flex;
+    align-items: center;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Ubuntu', sans-serif;
+    color: #fff;
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../assets/home/background-home-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+
+    header{
+        width: 100%;
+        height: 80px;
+        @extend %flex;
+        justify-content: space-between;
+
+        .logo{
+            padding: 15px 20px 10px; 
+            img{max-width: 40px;}
+        }
+        
+        .mune{display: none;}
+
+        .navbar{
+            width: 60%;
+            height: 80%;
+            background-color: rgba($mainColor, $alpha);
+            backdrop-filter: blur(5px);
+            padding: 10px;
+            transition: all 350ms ease-out;
+
+            ul{
+                width: 100%;
+                height: 100%;
+                @extend %flex;
+                justify-content: space-around;
+
+                li{
+                    list-style-type: none;
+                    transition: all 350ms ease-out;
+
+                    a{
+                        text-decoration: none;
+                        color: $mainColor;
+                        text-transform: uppercase;
+                        font-weight: 300;
+                        padding-bottom: 19px;
+
+                        [data-hidden="true"]{
+                            margin: 0 5px;
+                            font-weight: 400;
+                            
+                        }
+                    }
+                }
+
+                &  .active{
+                      a{
+                        border-bottom: 2px solid $activeColor ;
+
+                        span{
+                            color: $activeColor;
+                            font-weight: 600;
+                        }
+                      }
+            }
+            }
+        }
+    }
+
+
+    .sade-bar{
+        height: calc(100% - 50px);
+        @extend %flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 2em;
+
+        .boxtext{
+            width: 50%;
+
+            .one-p{
+                @include font(1.3em , capitalize , 0.7em , 0);
+            }
+            h2{
+                @include font(2em, uppercase , 1em , 0);
+                letter-spacing: 8px;
+            }
+            .two-p{
+                @include font(0.9em, capitalize, 0, 0);
+                line-height: 25px;
+            }
+
+        }
+        .image{
+            margin: 1em 0;
+            img{
+                max-width: 250px;
+            }
+        }
+    }
+
+}
+
+//import media
+@import 'media-query';
