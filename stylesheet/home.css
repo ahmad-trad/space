@@ -105,7 +105,7 @@ section .sade-bar .boxtext {
 }
 
 section .sade-bar .boxtext .one-p {
-  font-size: 1.3em;
+  font-size: 1.5em;
   text-transform: capitalize;
   margin: 0.7em 0;
 }
@@ -118,10 +118,10 @@ section .sade-bar .boxtext h2 {
 }
 
 section .sade-bar .boxtext .two-p {
-  font-size: 0.9em;
+  font-size: 1.2em;
   text-transform: capitalize;
   margin: 0 0;
-  line-height: 25px;
+  line-height: 30px;
 }
 
 section .sade-bar .image {
@@ -140,7 +140,7 @@ section .sade-bar .image img {
     width: 1.4em;
     height: 1.4em;
     position: absolute;
-    top: 1em;
+    top: 1.7em;
     right: 1em;
     z-index: 9999;
     display: block;

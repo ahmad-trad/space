@@ -103,15 +103,15 @@ section{
             width: 50%;
 
             .one-p{
-                @include font(1.3em , capitalize , 0.7em , 0);
+                @include font(1.5em , capitalize , 0.7em , 0);
             }
             h2{
                 @include font(2em, uppercase , 1em , 0);
                 letter-spacing: 8px;
             }
             .two-p{
-                @include font(0.9em, capitalize, 0, 0);
-                line-height: 25px;
+                @include font(1.2em, capitalize, 0, 0);
+                line-height: 30px;
             }
 
         }
